@@ -2,7 +2,7 @@
 //  repotaskUITests.swift
 //  repotaskUITests
 //
-//  Created by Anna Wąsowicz on 05/12/2022.
+//  Created by Jędrzej Sokołowski on 05/12/2022.
 //
 
 import XCTest
