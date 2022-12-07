@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9319AD1D2940937C004C51B2 /* RepositoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319AD1C2940937C004C51B2 /* RepositoryDetailViewModel.swift */; };
+		9319AD2329409975004C51B2 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319AD2229409975004C51B2 /* RepositoryService.swift */; };
+		9319AD252940A0E1004C51B2 /* RepositoryInfoListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9319AD242940A0E1004C51B2 /* RepositoryInfoListDTO.swift */; };
 		937502CC293DF6380027913D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937502CB293DF6380027913D /* AppDelegate.swift */; };
 		937502CE293DF6380027913D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937502CD293DF6380027913D /* SceneDelegate.swift */; };
 		937502D0293DF6380027913D /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937502CF293DF6380027913D /* RepositoriesViewController.swift */; };
@@ -23,7 +26,6 @@
 		9375031B293E1C9D0027913D /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375031A293E1C9D0027913D /* AppCoordinatorTests.swift */; };
 		9375031F293E20150027913D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375031E293E20150027913D /* Coordinator.swift */; };
 		93750321293E20340027913D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750320293E20340027913D /* ViewModel.swift */; };
-		93750324293E35970027913D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750323293E35970027913D /* Repository.swift */; };
 		93750327293E37C10027913D /* RepositioriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750326293E37C10027913D /* RepositioriesCoordinator.swift */; };
 		93750329293E3F6E0027913D /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750328293E3F6E0027913D /* RepositoryCell.swift */; };
 		9375032B293E57AE0027913D /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375032A293E57AE0027913D /* NavigationCoordinator.swift */; };
@@ -32,9 +34,16 @@
 		93750335293EB4630027913D /* StoryboardableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750334293EB4630027913D /* StoryboardableTest.swift */; };
 		93750337293EB53E0027913D /* Mock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93750336293EB53E0027913D /* Mock.storyboard */; };
 		9375033A293EB59C0027913D /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750339293EB59C0027913D /* MockViewController.swift */; };
-		9375033C293EBAEA0027913D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9375033B293EBAEA0027913D /* Main.storyboard */; };
 		9375033E293EC5AA0027913D /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375033D293EC5AA0027913D /* RepositoriesViewModel.swift */; };
 		93750340293EC7CD0027913D /* AppDelegate+DependencyRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375033F293EC7CD0027913D /* AppDelegate+DependencyRegistration.swift */; };
+		93750343293F59CC0027913D /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750342293F59CC0027913D /* HTTPService.swift */; };
+		9375034C293F7E870027913D /* RepositoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375034B293F7E870027913D /* RepositoryInfo.swift */; };
+		9375034F293FC6930027913D /* RepositorySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375034E293FC6930027913D /* RepositorySource.swift */; };
+		93750351293FC9FC0027913D /* RepositorySource+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750350293FC9FC0027913D /* RepositorySource+Endpoint.swift */; };
+		93750355294003100027913D /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750354294003100027913D /* MockURLProtocol.swift */; };
+		93750357294005020027913D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750356294005020027913D /* MockData.swift */; };
+		93750359294005730027913D /* HTTPServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93750358294005730027913D /* HTTPServiceTests.swift */; };
+		9375035B294079BD0027913D /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9375035A294079BD0027913D /* RepositoryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9319AD1C2940937C004C51B2 /* RepositoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewModel.swift; sourceTree = "<group>"; };
+		9319AD2229409975004C51B2 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		9319AD242940A0E1004C51B2 /* RepositoryInfoListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoListDTO.swift; sourceTree = "<group>"; };
 		937502C8293DF6380027913D /* repotask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repotask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		937502CB293DF6380027913D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		937502CD293DF6380027913D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +74,6 @@
 		9375031A293E1C9D0027913D /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		9375031E293E20150027913D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		93750320293E20340027913D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		93750323293E35970027913D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		93750326293E37C10027913D /* RepositioriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositioriesCoordinator.swift; sourceTree = "<group>"; };
 		93750328293E3F6E0027913D /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		9375032A293E57AE0027913D /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
@@ -71,9 +82,16 @@
 		93750334293EB4630027913D /* StoryboardableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardableTest.swift; sourceTree = "<group>"; };
 		93750336293EB53E0027913D /* Mock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mock.storyboard; sourceTree = "<group>"; };
 		93750339293EB59C0027913D /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
-		9375033B293EBAEA0027913D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9375033D293EC5AA0027913D /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		9375033F293EC7CD0027913D /* AppDelegate+DependencyRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+DependencyRegistration.swift"; sourceTree = "<group>"; };
+		93750342293F59CC0027913D /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		9375034B293F7E870027913D /* RepositoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfo.swift; sourceTree = "<group>"; };
+		9375034E293FC6930027913D /* RepositorySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySource.swift; sourceTree = "<group>"; };
+		93750350293FC9FC0027913D /* RepositorySource+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositorySource+Endpoint.swift"; sourceTree = "<group>"; };
+		93750354294003100027913D /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		93750356294005020027913D /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		93750358294005730027913D /* HTTPServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceTests.swift; sourceTree = "<group>"; };
+		9375035A294079BD0027913D /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9319AD1E29409390004C51B2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				93750328293E3F6E0027913D /* RepositoryCell.swift */,
+				9375033D293EC5AA0027913D /* RepositoriesViewModel.swift */,
+				937502CF293DF6380027913D /* RepositoriesViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		9319AD1F29409473004C51B2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9375035A294079BD0027913D /* RepositoryDetailViewController.swift */,
+				9319AD1C2940937C004C51B2 /* RepositoryDetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		937502BF293DF6380027913D = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +171,8 @@
 		937502E4293DF6390027913D /* repotaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				93750352294002B50027913D /* SupportingFiles */,
 				9375031A293E1C9D0027913D /* AppCoordinatorTests.swift */,
-				93750338293EB5440027913D /* StoryboardableTest */,
 			);
 			path = repotaskTests;
 			sourceTree = "<group>";
@@ -143,6 +180,7 @@
 		9375031C293E1FB40027913D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				93750345293F71AD0027913D /* Networking */,
 				9375031D293E1FCB0027913D /* MVVM-C */,
 				9375032E293E73430027913D /* StoryboardInstantiable.swift */,
 			);
@@ -166,7 +204,6 @@
 				937502CB293DF6380027913D /* AppDelegate.swift */,
 				937502CD293DF6380027913D /* SceneDelegate.swift */,
 				93750318293E14E80027913D /* AppCoordinator.swift */,
-				9375033B293EBAEA0027913D /* Main.storyboard */,
 				9375033F293EC7CD0027913D /* AppDelegate+DependencyRegistration.swift */,
 			);
 			path = Main;
@@ -175,12 +212,12 @@
 		93750325293E376A0027913D /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				937502CF293DF6380027913D /* RepositoriesViewController.swift */,
+				9319AD1F29409473004C51B2 /* Detail */,
+				9319AD1E29409390004C51B2 /* List */,
+				9375034D293FC63D0027913D /* Model */,
 				93750326293E37C10027913D /* RepositioriesCoordinator.swift */,
-				93750323293E35970027913D /* Repository.swift */,
 				937502D1293DF6380027913D /* Repositories.storyboard */,
-				93750328293E3F6E0027913D /* RepositoryCell.swift */,
-				9375033D293EC5AA0027913D /* RepositoriesViewModel.swift */,
+				9319AD2229409975004C51B2 /* RepositoryService.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -193,6 +230,44 @@
 				93750339293EB59C0027913D /* MockViewController.swift */,
 			);
 			path = StoryboardableTest;
+			sourceTree = "<group>";
+		};
+		93750345293F71AD0027913D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				93750342293F59CC0027913D /* HTTPService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		9375034D293FC63D0027913D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9375034B293F7E870027913D /* RepositoryInfo.swift */,
+				9375034E293FC6930027913D /* RepositorySource.swift */,
+				93750350293FC9FC0027913D /* RepositorySource+Endpoint.swift */,
+				9319AD242940A0E1004C51B2 /* RepositoryInfoListDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93750352294002B50027913D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				93750353294002D00027913D /* Networking */,
+				93750338293EB5440027913D /* StoryboardableTest */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		93750353294002D00027913D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				93750354294003100027913D /* MockURLProtocol.swift */,
+				93750356294005020027913D /* MockData.swift */,
+				93750358294005730027913D /* HTTPServiceTests.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +365,6 @@
 				937502DB293DF6390027913D /* LaunchScreen.storyboard in Resources */,
 				937502D8293DF6390027913D /* Assets.xcassets in Resources */,
 				937502D3293DF6380027913D /* Repositories.storyboard in Resources */,
-				9375033C293EBAEA0027913D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,18 +386,25 @@
 				937502D0293DF6380027913D /* RepositoriesViewController.swift in Sources */,
 				93750327293E37C10027913D /* RepositioriesCoordinator.swift in Sources */,
 				937502CC293DF6380027913D /* AppDelegate.swift in Sources */,
+				9319AD252940A0E1004C51B2 /* RepositoryInfoListDTO.swift in Sources */,
+				93750343293F59CC0027913D /* HTTPService.swift in Sources */,
 				9375031F293E20150027913D /* Coordinator.swift in Sources */,
 				9375032B293E57AE0027913D /* NavigationCoordinator.swift in Sources */,
-				93750324293E35970027913D /* Repository.swift in Sources */,
+				9319AD2329409975004C51B2 /* RepositoryService.swift in Sources */,
 				9375032D293E5FEE0027913D /* NavigableCoordinator.swift in Sources */,
 				93750329293E3F6E0027913D /* RepositoryCell.swift in Sources */,
 				93750340293EC7CD0027913D /* AppDelegate+DependencyRegistration.swift in Sources */,
+				9319AD1D2940937C004C51B2 /* RepositoryDetailViewModel.swift in Sources */,
 				93750319293E14E80027913D /* AppCoordinator.swift in Sources */,
 				937502D6293DF6380027913D /* repotask.xcdatamodeld in Sources */,
+				93750351293FC9FC0027913D /* RepositorySource+Endpoint.swift in Sources */,
+				9375034F293FC6930027913D /* RepositorySource.swift in Sources */,
+				9375035B294079BD0027913D /* RepositoryDetailViewController.swift in Sources */,
 				9375033E293EC5AA0027913D /* RepositoriesViewModel.swift in Sources */,
 				937502CE293DF6380027913D /* SceneDelegate.swift in Sources */,
 				93750321293E20340027913D /* ViewModel.swift in Sources */,
 				9375032F293E73430027913D /* StoryboardInstantiable.swift in Sources */,
+				9375034C293F7E870027913D /* RepositoryInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +415,9 @@
 				9375033A293EB59C0027913D /* MockViewController.swift in Sources */,
 				9375031B293E1C9D0027913D /* AppCoordinatorTests.swift in Sources */,
 				93750335293EB4630027913D /* StoryboardableTest.swift in Sources */,
+				93750355294003100027913D /* MockURLProtocol.swift in Sources */,
+				93750357294005020027913D /* MockData.swift in Sources */,
+				93750359294005730027913D /* HTTPServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +578,6 @@
 				INFOPLIST_FILE = repotask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -525,7 +608,6 @@
 				INFOPLIST_FILE = repotask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
