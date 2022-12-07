@@ -21,10 +21,23 @@ extension AppDelegate {
             return RepositoriesViewModel(repositoryService: repositoryService)
         }
         
+        self.container.register(RepositoryDetailViewModel.self) { resolver, repository in
+            let repositoryService = resolver.resolve(RepositoryService.self)!
+            return RepositoryDetailViewModel(repositoryService: repositoryService, repository: repository)
+        }
+        
         self.container.register(RepositoriesViewController.self) { resolver in
             let viewController = RepositoriesViewController.self.instantiate()!
             
             viewController.viewModel = resolver.resolve(RepositoriesViewModel.self)
+            return viewController
+        }
+        
+        self.container.register(RepositoryDetailViewController.self) { resolver, viewModel in
+           let viewController = RepositoryDetailViewController.self.instantiate()!
+            
+            viewController.viewModel = viewModel
+            
             return viewController
         }
     }

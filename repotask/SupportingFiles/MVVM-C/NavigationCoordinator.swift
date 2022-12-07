@@ -12,6 +12,7 @@ import UIKit
 class NavigationCoordinator: NavigableCoordinator {
     let container: Container
     let navigationController: UINavigationController
+    var childCoordinators = [Coordinator]()
     
     required init(container: Container, navigationController: UINavigationController) {
         self.container = container
@@ -19,6 +20,7 @@ class NavigationCoordinator: NavigableCoordinator {
     }
     
     func bind(coordinator: any Coordinator) {
+        childCoordinators.append(coordinator)
         coordinator.start()
     }
     

@@ -7,26 +7,47 @@
 
 import Swinject
 import UIKit
+import RxSwift
 
 final class RepositoriesCoordinator: NavigationCoordinator {
+    var disposeBag = DisposeBag()
     
     override func start() {
-        let vc = container.resolve(RepositoriesViewController.self)!
-        navigationController.pushViewController(vc, animated: true)
-//        vc.viewModel.output.selected
-//            .subscribe(onNext: { selected in
-//                
-//            })
+        self.navigationController.navigationBar.tintColor = .white
+        self.navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController.navigationBar.isTranslucent = true
+        self.presentList()
+        
         super.start()
     }
     
-    func presentList() {
+    private func presentList() {
+        guard let vc = self.container.resolve(RepositoriesViewController.self) else {
+            return
+        }
         
-        
-//        navigationController.pushViewController(vc, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+        _ = vc.view
+        self.bind(selectedRepository: vc.selectedRepository)
     }
-//
-//    func presentDetail(detail: RepositoryInfo) {
-//        let vc =
-//    }
+
+    private func bind(selectedRepository: Observable<RepositoryInfo>) {
+        selectedRepository
+            .subscribe(onNext: { [unowned self] repository in
+                if self.navigationController.viewControllers.first is RepositoriesViewController {
+                    self.presentDetail(detail: repository)
+                }
+            })
+            .disposed(by: self.disposeBag)
+    }
+    
+    private func presentDetail(detail: RepositoryInfo) {
+        let viewModel = self.container.resolve(RepositoryDetailViewModel.self, argument: detail)
+        
+        guard let viewController = self.container.resolve(RepositoryDetailViewController.self, argument: viewModel) else {
+            return
+        }
+        
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }

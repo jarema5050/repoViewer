@@ -8,9 +8,18 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 class RepositoryCell: UICollectionViewCell {
     static let reuseIdentifier = "RepositoryCell"
+    
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                self.isSelected = false
+            }
+        }
+    }
     
     @IBOutlet private var repositoryNameLabel: UILabel!
     @IBOutlet private var ownerNameLabel: UILabel!
@@ -26,7 +35,6 @@ class RepositoryCell: UICollectionViewCell {
         
         repository.avatarImage?
             .asDriver(onErrorJustReturn: UIImage(systemName: "multiply.circle.fill"))
-            .debug()
             .drive(self.ownerImageView.rx.image)
             .disposed(by: self.disposeBag)
         

@@ -2,7 +2,7 @@
 //  RepositoryInfoListDTO.swift
 //  repotask
 //
-//  Created by Anna Wąsowicz on 07/12/2022.
+//  Created by Jędrzej Sokołowski on 07/12/2022.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 
 struct RepositoryInfoListDTO {
-    private var parent: RepositoryInfo
+    var parent: RepositoryInfo
     
     private var repositoryService: RepositoryService
     
@@ -21,7 +21,7 @@ struct RepositoryInfoListDTO {
     
     var avatarImage: Observable<UIImage?>? {
         if let url = self.parent.owner.avatarUrl {
-            return repositoryService.getImage(url: url)
+            return self.repositoryService.getImage(url: url)
         }
         
         return nil
@@ -37,16 +37,5 @@ struct RepositoryInfoListDTO {
     
     var sourceImage: UIImage? {
         self.parent.repositorySource?.image
-    }
-}
-
-fileprivate extension RepositorySource {
-    var image: UIImage? {
-        switch self {
-        case .bitbucket:
-            return UIImage(named: "bitbucket")
-        case .github:
-            return UIImage(named: "github")
-        }
     }
 }

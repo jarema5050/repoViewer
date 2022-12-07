@@ -21,13 +21,26 @@ final class RepositoriesViewController: UIViewController, UICollectionViewDelega
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    private var sortButton = BarButtonItem(item: UIBarButtonItem(title: "Sort A→Z"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView.allowsSelection = true
+        
+        self.navigationItem.rightBarButtonItem = self.sortButton.item
+        
+        self.sortButton.setTitle("Random", for: .selected)
+        
         self.bindViewModel()
     }
     
     private func bindViewModel() {
-        viewModel.output.repositories
+        self.sortButton.isSelected
+            .bind(to: self.viewModel.input.sort)
+            .disposed(by: self.disposeBag)
+        
+        self.viewModel.output.repositories
             .asDriver(onErrorJustReturn: [])
             .drive(self.collectionView.rx.items) { (collectionView: UICollectionView, index: Int, repository: RepositoryInfoListDTO) in
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RepositoryCell.reuseIdentifier, for: IndexPath(index: index))
@@ -40,5 +53,9 @@ final class RepositoriesViewController: UIViewController, UICollectionViewDelega
     }
 }
 
-
-
+extension RepositoriesViewController {
+    var selectedRepository: Observable<RepositoryInfo> {
+        self.collectionView.rx.modelSelected(RepositoryInfoListDTO.self)
+            .map(\.parent)
+    }
+}
