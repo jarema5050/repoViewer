@@ -2,19 +2,22 @@
 //  AppDelegate.swift
 //  repotask
 //
-//  Created by Anna Wąsowicz on 05/12/2022.
+//  Created by Jędrzej Sokołowski on 05/12/2022.
 //
 
 import UIKit
 import CoreData
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.setupDependencies()
+        
         return true
     }
 
@@ -78,4 +81,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
