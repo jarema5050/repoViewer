@@ -7,7 +7,7 @@ Using Swift, create an application that meets these criteria:
  1. It consists of two screens: one with an element list and the other with element details after it has been selected from the list. 
  2. It downloads the elements from two APIs: 
 * Bitbucket: 
-https://api.bitbucket.org/2.0/repositories?fields=values.name,values.ow ner,values.description 
+https://api.bitbucket.org/2.0/repositories?fields=values.name,values.owner,values.description 
 * GitHub: https://api.github.com/repositories 
 3. List element consists of: repository name, user’s name and user’s avatar. ● Details screen consists of: repository name, repository details, user’s name and user’s avatar. 
 4. Elements downloaded from the Bitbucket API should be visually distinguishable from Github ones (in any way). 
