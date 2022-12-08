@@ -9,10 +9,11 @@ Using Swift, create an application that meets these criteria:
 * Bitbucket: 
 https://api.bitbucket.org/2.0/repositories?fields=values.name,values.owner,values.description 
 * GitHub: https://api.github.com/repositories 
-3. List element consists of: repository name, user’s name and user’s avatar. ● Details screen consists of: repository name, repository details, user’s name and user’s avatar. 
-4. Elements downloaded from the Bitbucket API should be visually distinguishable from Github ones (in any way). 
-5. Element list needs to have an option to turn on/off alphabetical sorting by repository name. 
-6. Pagination is not required.  
+3. List element consists of: repository name, user’s name and user’s avatar.
+4. Details screen consists of: repository name, repository details, user’s name and user’s avatar. 
+5. Elements downloaded from the Bitbucket API should be visually distinguishable from Github ones (in any way). 
+6. Element list needs to have an option to turn on/off alphabetical sorting by repository name. 
+7. Pagination is not required.  
 
 Nice to have:
 
