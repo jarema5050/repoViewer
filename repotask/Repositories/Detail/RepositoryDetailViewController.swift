@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class RepositoryDetailViewController: UIViewController, Storyboardable {
+final class RepositoryDetailViewController: UIViewController, Storyboardable {
     
     static var storyBoardName: String {
         return "Repositories"
@@ -57,6 +57,10 @@ class RepositoryDetailViewController: UIViewController, Storyboardable {
         self.repositoryTypeImageView.image = self.viewModel.repository.repositorySource?.image
         
         self.title = self.viewModel.repository.name
+        
+        self.goToSourceButton.isHidden = self.viewModel.repository.htmlUrl == nil
+        
+        self.goToProfileButton.isHidden = self.viewModel.repository.owner.htmlUrl == nil
     }
     
     private func labeled(label: String, text: String) -> NSAttributedString {
@@ -75,5 +79,18 @@ class RepositoryDetailViewController: UIViewController, Storyboardable {
         firstString.append(secondString)
         
         return firstString
+    }
+}
+
+extension RepositoryDetailViewController {
+    var openURL: Observable<URL> {
+        Observable.merge(
+            self.goToSourceButton.rx.tap.asObservable()
+                .map { [unowned self] _ in self.viewModel.repository.htmlUrl }
+                .compactMap { $0 },
+            self.goToProfileButton.rx.tap.asObservable()
+                .map { [unowned self] _ in self.viewModel.repository.owner.htmlUrl }
+                .compactMap { $0 }
+        )
     }
 }

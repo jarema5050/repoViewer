@@ -19,23 +19,23 @@ struct RepositoryInfoListDTO {
         self.repositoryService = repositoryService
     }
     
-    var avatarImage: Observable<UIImage?>? {
+    lazy var avatarImage: Observable<UIImage?>? = {
         if let url = self.parent.owner.avatarUrl {
             return self.repositoryService.getImage(url: url)
         }
         
         return nil
-    }
+    }()
     
-    var login: String? {
+    lazy var login: String? = {
         self.parent.owner.login
-    }
+    }()
     
-    var name: String? {
+    lazy var name: String? = {
         self.parent.name
-    }
+    }()
     
-    var sourceImage: UIImage? {
+    lazy var sourceImage: UIImage? = {
         self.parent.repositorySource?.image
-    }
+    }()
 }

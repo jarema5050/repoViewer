@@ -8,6 +8,6 @@
 import UIKit
 @testable import repotask
 
-class MockViewController: UIViewController, Storyboardable {
+final class MockViewController: UIViewController, Storyboardable {
     static var storyBoardName: String { "Mock" }
 }

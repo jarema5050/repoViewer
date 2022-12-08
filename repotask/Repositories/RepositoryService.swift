@@ -30,14 +30,14 @@ struct RepositoryService {
     }
     
     func getBitbucketRepositories() -> Observable<[RepositoryInfo]> {
-        let bitbucketObservable: Observable<RepositoryInfoPackage> = self.httpService.fetch(url: RepositorySource.bitbucket.endpoint!)
+        let bitbucketObservable: Observable<RepositoryInfoPackage> = self.httpService.fetch(url: RepositorySource.bitbucket.endpoint)
         return bitbucketObservable
             .map(\.values)
             .map { self.typed(infos: $0, source: .bitbucket) }
     }
     
     func getGithubRepositories() -> Observable<[RepositoryInfo]> {
-        self.httpService.fetch(url: RepositorySource.github.endpoint!)
+        self.httpService.fetch(url: RepositorySource.github.endpoint)
             .map { self.typed(infos: $0, source: .github) }
     }
     

@@ -9,17 +9,17 @@ import XCTest
 import Swinject
 @testable import repotask
 
-class AppCoordinatorTests: XCTest {
+final class AppCoordinatorTests: XCTest {
     var sut: AppCoordinator!
     
     override func setUp() {
         super.setUp()
         
-        sut = AppCoordinator(window: UIWindow(), container: Container())
+        self.sut = AppCoordinator(window: UIWindow(), container: Container())
     }
     
     override func tearDown() {
-        sut = nil
+        self.sut = nil
         
         super.tearDown()
     }

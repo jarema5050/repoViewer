@@ -94,18 +94,64 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-NX-NLc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Mw2-Xq-3vI">
+                                        <rect key="frame" x="32" y="288" width="311" height="91.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network connection lost. Try again later...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGP-zs-hqI">
+                                                <rect key="frame" x="0.0" y="0.0" width="311" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-hF-Scj">
+                                                <rect key="frame" x="0.0" y="51.5" width="311" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="4Gx-kf-pVT"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mw2-Xq-3vI" secondAttribute="trailing" constant="32" id="fF2-Ws-g6R"/>
+                                    <constraint firstItem="Mw2-Xq-3vI" firstAttribute="centerY" secondItem="6v6-NX-NLc" secondAttribute="centerY" id="nVL-6k-taR"/>
+                                    <constraint firstItem="Mw2-Xq-3vI" firstAttribute="leading" secondItem="6v6-NX-NLc" secondAttribute="leading" constant="32" id="z5T-n5-cSi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6v6-NX-NLc" secondAttribute="bottom" id="6sO-w8-Ixo"/>
                             <constraint firstItem="3v4-xx-YXc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="D50-ju-wjz"/>
+                            <constraint firstItem="6v6-NX-NLc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E0T-ue-C7Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6v6-NX-NLc" secondAttribute="trailing" id="HAP-NZ-32K"/>
                             <constraint firstItem="3v4-xx-YXc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RMr-WX-gbM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3v4-xx-YXc" secondAttribute="bottom" id="Tat-Fs-CAm"/>
+                            <constraint firstItem="6v6-NX-NLc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yir-OK-sVJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3v4-xx-YXc" secondAttribute="trailing" constant="16" id="pte-3K-fZn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="3v4-xx-YXc" id="F04-Mk-cPY"/>
+                        <outlet property="errorDescriptionLabel" destination="CGP-zs-hqI" id="WUO-ub-GUX"/>
+                        <outlet property="errorOverlay" destination="6v6-NX-NLc" id="GwV-k1-Jhd"/>
+                        <outlet property="refreshButton" destination="dPS-hF-Scj" id="lo1-hq-hck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

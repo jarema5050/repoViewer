@@ -8,6 +8,7 @@
 import Swinject
 import UIKit
 import RxSwift
+import SafariServices
 
 final class RepositoriesCoordinator: NavigationCoordinator {
     var disposeBag = DisposeBag()
@@ -22,13 +23,13 @@ final class RepositoriesCoordinator: NavigationCoordinator {
     }
     
     private func presentList() {
-        guard let vc = self.container.resolve(RepositoriesViewController.self) else {
+        guard let viewController = self.container.resolve(RepositoriesViewController.self) else {
             return
         }
         
-        self.navigationController.pushViewController(vc, animated: true)
-        _ = vc.view
-        self.bind(selectedRepository: vc.selectedRepository)
+        self.navigationController.pushViewController(viewController, animated: true)
+        _ = viewController.view
+        self.bind(selectedRepository: viewController.selectedRepository)
     }
 
     private func bind(selectedRepository: Observable<RepositoryInfo>) {
@@ -48,6 +49,22 @@ final class RepositoriesCoordinator: NavigationCoordinator {
             return
         }
         
+        _ = viewController.view
+        
+        viewController.openURL
+            .subscribe(onNext: { [unowned self] url in
+                self.presentLink(url: url)
+            })
+            .disposed(by: self.disposeBag)
+        
         self.navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func presentLink(url: URL) {
+        guard let viewController = self.container.resolve(SFSafariViewController.self, argument: url) else {
+            return
+        }
+        
+        self.navigationController.present(viewController, animated: true)
     }
 }

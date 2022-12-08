@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class HTTPService {
-    let session: URLSession
+final class HTTPService {
+    private let session: URLSession
     
     init(session: URLSession = .shared) {
         self.session = session

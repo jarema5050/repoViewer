@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import UIKit
 
-class RepositoryDetailViewModel: ViewModel {
+final class RepositoryDetailViewModel: ViewModel {
     var input: Input
     
     var output: Output

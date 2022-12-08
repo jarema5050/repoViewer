@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class BarButtonItem {
+final class BarButtonItem {
     let item: UIBarButtonItem
     var isSelected: Observable<Bool>
     

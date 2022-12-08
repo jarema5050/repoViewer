@@ -8,10 +8,10 @@
 import Foundation
 
 extension RepositorySource {
-    var endpoint: URL? {
+    var endpoint: URL {
         switch self {
-        case .github: return URL(string: "https://api.github.com/repositories")
-        case .bitbucket: return URL(string: "https://api.bitbucket.org/2.0/repositories?fields=values.name,values.owner,values.description")
+        case .github: return URL(string: "https://api.github.com/repositories").unsafelyUnwrapped
+        case .bitbucket: return URL(string: "https://api.bitbucket.org/2.0/repositories?fields=values.name,values.owner,values.description").unsafelyUnwrapped
         }
     }
 }

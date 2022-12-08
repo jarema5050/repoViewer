@@ -5,7 +5,7 @@
 //  Created by Jędrzej Sokołowski on 06/12/2022.
 //
 
-enum RepositorySource: CaseIterable {
+enum RepositorySource {
     case github
     case bitbucket
 }

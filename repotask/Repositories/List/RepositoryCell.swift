@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RepositoryCell: UICollectionViewCell {
+final class RepositoryCell: UICollectionViewCell {
     static let reuseIdentifier = "RepositoryCell"
     
     override var isSelected: Bool {
@@ -28,7 +28,13 @@ class RepositoryCell: UICollectionViewCell {
     
     private var disposeBag = DisposeBag()
     
+    override func prepareForReuse() {
+        self.disposeBag = DisposeBag()
+    }
+    
     func set(repository: RepositoryInfoListDTO) {
+        var repository = repository
+        
         self.repositoryNameLabel.text = repository.name
         self.ownerNameLabel.text = repository.login
         self.repositorySourceImageView.image = repository.sourceImage
